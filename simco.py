@@ -65,13 +65,13 @@ class Simco:
         self.driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
             "source": "Object.defineProperty(navigator, 'webdriver', { get: () => undefined })"
             })
-    
+   
     def start(self):
         self.url="https://simcompanies.com"
         self.driver.get(self.url)
 
         self.driver.maximize_window()
-        
+       
         time.sleep(2)
 
         self.cookie=WebDriverWait(self.driver,45).until(
@@ -84,7 +84,7 @@ class Simco:
             EC.presence_of_element_located((By.XPATH,"/html/body/div/div/div[3]/div[3]/div/div/div[1]/div/div[2]/div/div/div[1]/div/div/form/div/a")))
         self.signin.click()
         time.sleep(3)
-        
+       
         self.email=WebDriverWait(self.driver,45).until(
             EC.presence_of_element_located((By.NAME,"email")))
         time.sleep(0.8)
@@ -98,7 +98,7 @@ class Simco:
         self.password.send_keys(Keys.RETURN)
         time.sleep(3.5)
 
-        
+       
 
     def buy(self,realm,amount=None,amount2=None):
         if realm=="R2":
@@ -106,15 +106,15 @@ class Simco:
                 EC.presence_of_element_located((By.XPATH,"/html/body/div/div[2]/div[1]/nav/div/div/div[1]/div[1]/div/div/img")))
             self.r2.click()
             time.sleep(4.5)
-            
+           
         self.exchange=WebDriverWait(self.driver,45).until(
             EC.presence_of_element_located((By.ID,"menu-exchange")))
         self.exchange.click()
         time.sleep(6)
 
         self.gloves=WebDriverWait(self.driver,45).until(
-            EC.presence_of_element_located((By.XPATH,"//*[@id='page']/div/div/div/div[1]/div/div/div[1]/div/div/div/a[1]")))
-        self.gloves.click()
+            EC.presence_of_element_located((By.XPATH,"//*[@id='page']/div/div/div/div[1]/div/div/div[2]/div[4]/div/a[4]")))
+        self.gloves.click()                         
         time.sleep(4)
 
         self.quantity=WebDriverWait(self.driver,45).until(
@@ -134,14 +134,14 @@ class Simco:
             EC.presence_of_element_located((By.ID,"menu-map")))
         self.maap.click()
         time.sleep(3)
-    
+   
     def sell(self,realm,store_xpath,gni=None,sli=None,gni2=None,sli2=None):
         if realm=="R1":
             self.npmstore=WebDriverWait(self.driver,45).until(
                 EC.presence_of_element_located((By.XPATH,store_xpath)))
             self.npmstore.click()
             time.sleep(3)
-            
+           
             self.gn=WebDriverWait(self.driver,45).until(
                 EC.presence_of_element_located((By.XPATH,"/html/body/div/div[2]/div[2]/div[3]/div/div/div/div[2]/div/div/div[1]/div/div[2]/form/div/div[1]/p/input")))
             self.gn.send_keys(gni)
@@ -157,29 +157,29 @@ class Simco:
                 EC.presence_of_element_located((By.ID,"menu-map")))
             self.maap.click()
             time.sleep(5)
-            
+           
         else:
             self.npmstore2=WebDriverWait(self.driver,45).until(
                 EC.presence_of_element_located((By.XPATH,store_xpath)))
             self.npmstore2.click()
             time.sleep(3)
-            
+           
             self.gn2=WebDriverWait(self.driver,45).until(
                 EC.presence_of_element_located((By.XPATH,"/html/body/div/div[2]/div[2]/div[3]/div/div/div/div[2]/div/div/div[1]/div/div[2]/form/div/div[1]/p/input")))
             self.gn2.send_keys(gni2)
             time.sleep(1.4)
-            
+           
             self.sel2=WebDriverWait(self.driver,45).until(
                 EC.presence_of_element_located((By.XPATH,"/html/body/div/div[2]/div[2]/div[3]/div/div/div/div[2]/div/div/div[1]/div/div[2]/form/div/div[2]/p/input")))
             self.sel2.send_keys(sli2)
             self.sel2.send_keys(Keys.RETURN)
             time.sleep(2)
-            
+           
             self.maap=WebDriverWait(self.driver,45).until(
                 EC.presence_of_element_located((By.ID,"menu-map")))
             self.maap.click()
             time.sleep(5)
-            
+           
     def extra(self,gni2,sli2):
         #store14
         store14=WebDriverWait(driver,45).until(
@@ -189,7 +189,7 @@ class Simco:
 
         gn=WebDriverWait(driver,45).until(
             EC.presence_of_element_located((By.XPATH,"/html/body/div/div[2]/div[2]/div[3]/div/div/div/div[2]/div/div/div[1]/div/div[2]/form/div/div[1]/p/input")))
-        gn.send_keys(gni2)               
+        gn.send_keys(gni2)              
         time.sleep(1.3)
 
         sell=WebDriverWait(driver,45).until(
