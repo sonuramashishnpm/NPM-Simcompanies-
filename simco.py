@@ -28,8 +28,8 @@ store_xpath=["/html/body/div/div[2]/div[2]/div[3]/div/div[1]/div/div/a[7]/div[2]
         "/html/body/div/div[2]/div[2]/div[3]/div/div[1]/div/div/a[10]/div[2]",
         "/html/body/div/div[2]/div[2]/div[3]/div/div[1]/div/div/a[9]/div[2]",
         "/html/body/div/div[2]/div[2]/div[3]/div/div[1]/div/div/a[14]/div[2]",
-        "/html/body/div/div[2]/div[2]/div[3]/div/div[1]/div/div/a[16]/div[2]",
-        "/html/body/div/div[2]/div[2]/div[3]/div/div[1]/div/div/a[15]/div[2]"
+        "/html/body/div/div[2]/div[2]/div[3]/div/div[1]/div/div/a[13]/div[2]",
+        "/html/body/div/div[2]/div[2]/div[3]/div/div[1]/div/div/a[15]/div[2]",
         ]
 
 user_email=input("Enter your simco account email")
@@ -205,7 +205,7 @@ class Simco:
 
         #store15
         store15=WebDriverWait(driver,45).until(
-            EC.presence_of_element_located((By.XPATH,"/html/body/div/div[2]/div[2]/div[3]/div/div[1]/div/div/a[17]/div[2]")))
+            EC.presence_of_element_located((By.XPATH,"/html/body/div/div[2]/div[2]/div[3]/div/div[1]/div/div/a[16]/div[2]")))
         store15.click()
         sleep(3.7)
 
@@ -240,3 +240,4 @@ for store in store_xpath:
     else:
         bot.sell(realm,store,gni2=gni2,sli2=sli2)
 bot.extra(gni2,sli2)
+
