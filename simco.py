@@ -151,12 +151,9 @@ class Simco:
                 EC.presence_of_element_located((By.XPATH,"/html/body/div/div[2]/div[2]/div[3]/div/div/div/div[2]/div/div/div[1]/div/div[2]/form/div/div[2]/p/input")))
             self.sel.send_keys(sli)
             self.sel.send_keys(Keys.RETURN)
-            time.sleep(2)
+            time.sleep(7)
                                            
-            self.maap=WebDriverWait(self.driver,45).until(
-                EC.presence_of_element_located((By.ID,"menu-map")))
-            self.maap.click()
-            time.sleep(5)
+            
            
         else:
             self.npmstore2=WebDriverWait(self.driver,45).until(
@@ -173,12 +170,7 @@ class Simco:
                 EC.presence_of_element_located((By.XPATH,"/html/body/div/div[2]/div[2]/div[3]/div/div/div/div[2]/div/div/div[1]/div/div[2]/form/div/div[2]/p/input")))
             self.sel2.send_keys(sli2)
             self.sel2.send_keys(Keys.RETURN)
-            time.sleep(2)
-           
-            self.maap=WebDriverWait(self.driver,45).until(
-                EC.presence_of_element_located((By.ID,"menu-map")))
-            self.maap.click()
-            time.sleep(5)
+            time.sleep(8)
            
     def extra(self,gni2,sli2):
         #store14
@@ -196,12 +188,7 @@ class Simco:
             EC.presence_of_element_located((By.XPATH,"/html/body/div/div[2]/div[2]/div[3]/div/div/div/div[2]/div/div/div[1]/div/div[2]/form/div/div[2]/p/input")))
         sell.send_keys(sli2)
         sell.send_keys(Keys.RETURN)
-        time.sleep(1.5)
-
-        maap=WebDriverWait(self.driver,45).until(
-            EC.presence_of_element_located((By.ID,"menu-map")))
-        maap.click()
-        time.sleep(4.8)
+        time.sleep(8)
 
         #store15
         store15=WebDriverWait(self.driver,45).until(
@@ -218,12 +205,7 @@ class Simco:
             EC.presence_of_element_located((By.XPATH,"/html/body/div/div[2]/div[2]/div[3]/div/div/div/div[2]/div/div/div[1]/div/div[2]/form/div/div[2]/p/input")))
         sell.send_keys(sli2)
         sell.send_keys(Keys.RETURN)
-        time.sleep(1.5)
-
-        maap=WebDriverWait(self.driver,45).until(
-            EC.presence_of_element_located((By.ID,"menu-map")))
-        maap.click()
-        time.sleep(4.8)
+        time.sleep(8)
 
 ##############################################################EEEEEEEEEEEEEEENNNNNNNNNNNNNNNNNNNDDDDDDDDDDDDDDDDDDDDDDD#############################################################################
 
@@ -240,5 +222,6 @@ for store in store_xpath:
     else:
         bot.sell(realm,store,gni2=gni2,sli2=sli2)
 bot.extra(gni2,sli2)
+
 
 
