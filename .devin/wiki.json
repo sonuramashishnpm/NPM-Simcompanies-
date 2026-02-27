@@ -1,0 +1,302 @@
+{
+  "repo_notes": [
+    {
+      "content": ""
+    }
+  ],
+  "pages": [
+    {
+      "title": "Overview",
+      "purpose": "Introduce the NPM-Simcompanies repository, explaining its purpose as a SimCompanies game automation tool and providing a high-level summary of its capabilities",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Repository Structure",
+      "purpose": "Describe the three files in the repository (simco.py, README.md, LICENSE) and explain their relative importance and roles",
+      "parent": "Overview",
+      "page_notes": [
+        {
+          "content": "y"
+        }
+      ]
+    },
+    {
+      "title": "Key Features and Capabilities",
+      "purpose": "List and briefly explain the main features: authentication, glove trading automation, multi-realm support, and anti-detection",
+      "parent": "Overview",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Getting Started",
+      "purpose": "Provide practical guidance for users who want to run the automation script, including prerequisites and execution steps",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Prerequisites and Dependencies",
+      "purpose": "Document required software (Python, Chrome, undetected_chromedriver, Selenium) and system requirements (Windows for registry access)",
+      "parent": "Getting Started",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "User Input Guide",
+      "purpose": "Explain each user prompt (email, password, realm selection, quantities, prices) and how they affect the automation",
+      "parent": "Getting Started",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Running the Script",
+      "purpose": "Provide step-by-step instructions for executing simco.py and what to expect during execution",
+      "parent": "Getting Started",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "System Architecture",
+      "purpose": "Present the high-level architectural design of the automation system, including its layers and main components",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "External Dependencies",
+      "purpose": "Describe how the system interacts with external systems (SimCompanies website, Chrome browser, Windows Registry) and libraries",
+      "parent": "System Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "The Simco Class",
+      "purpose": "Document the core Simco class, its responsibilities, and provide an overview of its six methods",
+      "parent": "System Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Initialization (__init__)",
+      "purpose": "Explain browser setup, ChromeOptions configuration, and anti-detection measures applied during initialization",
+      "parent": "System Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Start Method",
+      "purpose": "Document the start() method which navigates to SimCompanies and handles initial page setup including cookie consent",
+      "parent": "System Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Authentication Method",
+      "purpose": "Describe the authentication() method's login flow, including locating form fields and credential submission",
+      "parent": "System Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Buy Method",
+      "purpose": "Explain the buy() method's process for purchasing gloves, including realm switching and exchange navigation",
+      "parent": "System Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Sell Method",
+      "purpose": "Document the sell() method which handles listing gloves in individual stores with specified quantities and prices",
+      "parent": "System Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Extra Method",
+      "purpose": "Describe the extra() method and why it exists separately to handle two specific stores (store14 and store16)",
+      "parent": "System Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Anti-Detection Mechanisms",
+      "purpose": "Detail the techniques used to avoid bot detection: undetected_chromedriver, ChromeOptions flags, and navigator.webdriver modification",
+      "parent": "System Architecture",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Realm System",
+      "purpose": "Explain the concept of realms (R1 and R2) in SimCompanies and how the script handles realm-specific logic",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Realm Configuration",
+      "purpose": "Document how users select realms and how realm choice affects configuration (different variables: gni vs gni2, sli vs sli2)",
+      "parent": "Realm System",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Realm-Specific Calculations",
+      "purpose": "Explain the purchase amount calculations that differ by realm (×13 for R1, ×14 for R2) and the business logic behind these multipliers",
+      "parent": "Realm System",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Realm Switching Logic",
+      "purpose": "Document how the script handles realm switching in the buy() method when R2 is selected",
+      "parent": "Realm System",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Store Management",
+      "purpose": "Explain how the script manages multiple in-game stores for selling gloves, including the store list and selling loop",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Store XPath List",
+      "purpose": "Document the hardcoded list of 13 store XPaths and explain the XPath pattern used to identify stores",
+      "parent": "Store Management",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Main Selling Loop",
+      "purpose": "Describe how the script iterates through the store_xpath list and calls sell() for each store",
+      "parent": "Store Management",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Extra Stores Architecture",
+      "purpose": "Explain the architectural decision to handle two additional stores (14 and 16) separately through the extra() method rather than the main loop",
+      "parent": "Store Management",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Operational Workflows",
+      "purpose": "Present the complete end-to-end execution flow from script start to completion, showing how all components work together",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Main Execution Flow",
+      "purpose": "Document the sequential execution in the main block: instantiation, start, authentication, buy, sell loop, extra",
+      "parent": "Operational Workflows",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Data Flow",
+      "purpose": "Trace how user input data flows through calculations and transformations to eventually affect SimCompanies website state",
+      "parent": "Operational Workflows",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Timing and Synchronization",
+      "purpose": "Explain the wait strategies used, including WebDriverWait timeouts and fixed sleep durations throughout the workflow",
+      "parent": "Operational Workflows",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Technical Implementation Details",
+      "purpose": "Provide deep technical documentation of implementation choices, patterns, and low-level details",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    }
+  ]
+}
