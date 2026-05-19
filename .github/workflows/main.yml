@@ -1,9 +1,26 @@
+name: 6 AM Loop Script
+
 on:
   schedule:
-    - timezone: IST
-  jobs:
-      my_job:
-        name: Installation testing
-        runs-on: ubuntu-latest
-        run: pip install npmai
-        
+    # Runs exactly at 06:00 AM local Indian Standard Time
+    - cron: '0 6 * * *'
+      timezone: 'Asia/Kolkata'
+
+jobs:
+  run-loop:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-with-version: '3.10'
+
+      - name: Execute Loop Command
+        run: |
+          for i in {1..50000}
+          do
+            echo "Iteration $i of 50000"
+            pip install --no-cache-dir npmai
+            pip uninstall -y npmai
+          done
