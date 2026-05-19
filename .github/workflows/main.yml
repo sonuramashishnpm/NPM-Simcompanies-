@@ -1,0 +1,9 @@
+on:
+  schedule:
+    - timezone: IST
+  jobs:
+      my_job:
+        name: Installation testing
+        runs-on: ubuntu-latest
+        run: pip install npmai
+        
